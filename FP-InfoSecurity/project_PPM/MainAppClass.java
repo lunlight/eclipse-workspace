@@ -85,7 +85,7 @@ public class MainAppClass {
 		frame.getContentPane().add(btnHideImage);
 
 		JLabel lblChooseAnOption = new JLabel("SELECCIONE UN BOT\u00D3N...");
-		lblChooseAnOption.setBounds(15, 10, 130, 19);
+		lblChooseAnOption.setBounds(15, 10, 185, 19);
 		frame.getContentPane().add(lblChooseAnOption);
 
 		//
