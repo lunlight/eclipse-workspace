@@ -99,31 +99,37 @@ public class BattleshipClient
 		lblNewLabel.setBounds(10, 11, 260, 29);
 		panel.add(lblNewLabel);
 
+//		FIRST SHIP
 		JProgressBar progressBar_CARRIER = new JProgressBar();
 		progressBar_CARRIER.setBounds(10, 56, 260, 14);
 		progressBar_CARRIER.setForeground(Color.RED);
 		panel.add(progressBar_CARRIER);
 
+//		SECOND SHIP
 		JProgressBar progressBar_BATTLESHIP = new JProgressBar();
 		progressBar_BATTLESHIP.setBounds(10, 92, 260, 14);
 		progressBar_BATTLESHIP.setForeground(Color.RED);
 		panel.add(progressBar_BATTLESHIP);
 
+//		THIRD SHIP
 		JProgressBar progressBar_CRUISER = new JProgressBar();
 		progressBar_CRUISER.setBounds(10, 124, 260, 14);
 		progressBar_CRUISER.setForeground(Color.RED);
 		panel.add(progressBar_CRUISER);
 
+//		FOURTH SHIP
 		JProgressBar progressBar_SUBMARINE = new JProgressBar();
 		progressBar_SUBMARINE.setBounds(10, 159, 260, 14);
 		progressBar_SUBMARINE.setForeground(Color.RED);
 		panel.add(progressBar_SUBMARINE);
 
+//		FIFTH SHIP
 		JProgressBar progressBar_DESTROYER = new JProgressBar();
 		progressBar_DESTROYER.setBounds(10, 194, 260, 14);
 		progressBar_DESTROYER.setForeground(Color.RED);
 		panel.add(progressBar_DESTROYER);
-
+		
+//		ADDS NAME TO THE PROGRESS BARS
 		JLabel lblNewLabel_SHIPS = new JLabel("<html><p>\r\nCARRIER\r\n<br><br>\r\nBATTLESHIP\r\n<br><br>\r\nCRUISER\r\n<br><br>\r\nSUBMARINE\r\n<br><br>\r\nDESTROYER\r\n</p><html>");
 		lblNewLabel_SHIPS.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNewLabel_SHIPS.setVerticalAlignment(SwingConstants.TOP);
@@ -132,6 +138,7 @@ public class BattleshipClient
 		lblNewLabel_SHIPS.setBounds(10, 38, 260, 223);
 		panel.add(lblNewLabel_SHIPS);
 
+//		LABEL OF MY BOARD
 		JLabel lblMyBoard = new JLabel("My Board");
 		lblMyBoard.setHorizontalAlignment(SwingConstants.CENTER);
 		lblMyBoard.setFont(new Font("Tahoma", Font.PLAIN, 18));
@@ -140,7 +147,7 @@ public class BattleshipClient
 
 		panel_1 = new JPanel();
 		panel_1.setBackground(SystemColor.control);
-		//		panel_1.setBackground(Color.GREEN);
+//		panel_1.setBackground(Color.GREEN);
 		panel_1.setBounds(290, 0, 697, 500);
 		panel_1.setLayout(new GridLayout(12, 12));
 		frame.getContentPane().add(panel_1);
@@ -163,7 +170,9 @@ public class BattleshipClient
 		caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
 
 		ActionListener[] actionListeners = new ActionListener[144];
+		@SuppressWarnings("unused")
 		ActionListener[] actionListeners2 = new ActionListener[144];
+		
 		for(int i = 0; i < 144; i++)
 		{
 			actionListeners[i] = new ActionListener() {
@@ -172,8 +181,14 @@ public class BattleshipClient
 					JButton btn = (JButton)e.getSource();
 					String location = btn.getText();
 					//					JOptionPane.showMessageDialog(null, name);
-					WriteInConsole("Attacked position: " + location);					
+					WriteInConsole("Attacked position: " + location);		
+//					
+//					
+//					
 					sendAttack(location);
+//					
+//					
+//					
 					if (hit == true)
 						btn.setBackground(Color.GREEN);
 					else
@@ -231,44 +246,37 @@ public class BattleshipClient
 		frame.getContentPane().add(panel_2);
 	}
 	
-	private static void WriteInConsole(String str)
-	{
+	private static void WriteInConsole(String str){
 		textArea.append("\n"+str);
 	}
 
-	protected static void printLocations()
-	{
+	protected static void printLocations(){
 		String str = "CARRIER: [" + carrier[0];
-		for(int i = 1; i < carrier.length; i++)
-		{
+		for(int i = 1; i < carrier.length; i++){
 			str+= ", " +carrier[i];
 		}
 		WriteInConsole(str+="]");
 		
 		str = "BATTLESHIP: [" + battleship[0];
-		for(int i = 1; i < battleship.length; i++)
-		{
+		for(int i = 1; i < battleship.length; i++){
 			str+= ", " +battleship[i];
 		}
 		WriteInConsole(str+="]");
 		
 		str = "CRUISER: [" + cruiser[0];
-		for(int i = 1; i < cruiser.length; i++)
-		{
+		for(int i = 1; i < cruiser.length; i++){
 			str+= ", " +cruiser[i];
 		}
 		WriteInConsole(str+="]");
 		
 		str = "SUBMARINE: [" + submarine[0];
-		for(int i = 1; i < submarine.length; i++)
-		{
+		for(int i = 1; i < submarine.length; i++){
 			str+= ", " +submarine[i];
 		}
 		WriteInConsole(str+="]");
 		
 		str = "DESTROYER: [" + destroyer[0];
-		for(int i = 1; i < destroyer.length; i++)
-		{
+		for(int i = 1; i < destroyer.length; i++){
 			str+= ", " +destroyer[i];
 		}
 		WriteInConsole(str+="]");
@@ -352,23 +360,4 @@ public class BattleshipClient
 //		;
 //		else if()
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

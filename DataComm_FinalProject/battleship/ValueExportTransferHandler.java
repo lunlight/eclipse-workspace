@@ -13,6 +13,10 @@ public class ValueExportTransferHandler extends TransferHandler {
 	/**
 	 * 
 	 */
+	private static final long serialVersionUID = -2014572375176675772L;
+	/**
+	 * 
+	 */
 	public static final DataFlavor SUPPORTED_DATE_FLAVOR = DataFlavor.stringFlavor;
 	private String value;
 
