@@ -27,27 +27,10 @@ import javax.swing.JTextField;
 public class MyShips extends JDialog {
 
 	private final JPanel contentPanel = new JPanel();
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
-	private JTextField textField_6;
-	private JTextField textField_7;
-	private JTextField textField_8;
-	private JTextField textField_9;
-	private JTextField textField_10;
-	private JTextField textField_11;
-	private JTextField textField_12;
-	private JTextField textField_13;
-	private JTextField textField_14;
-	private JTextField textField_15;
-	private JTextField textField_16;
+	
+	private JTextField[] txtLocations = new JTextField[17];
 	
 	protected JPanel panel;
-	
-	protected static String[] myLocations = new String[17];
 
 	/**
 	 * Launch the application.
@@ -72,10 +55,10 @@ public class MyShips extends JDialog {
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
 		{
-			textField = new JTextField();
-			textField.setBounds(680, 71, 40, 35);
-			contentPanel.add(textField);
-			textField.setColumns(10);
+			txtLocations[0] = new JTextField();
+			txtLocations[0].setBounds(680, 71, 40, 35);
+			contentPanel.add(txtLocations[0]);
+			txtLocations[0].setColumns(10);
 		}
 		{
 			JLabel lblCarrierBattleshipCruiser = new JLabel("<html><p>\r\n<br><br>\r\nCARRIER\r\n<br><br><br><br>\r\nBATTLESHIP\r\n<br><br><br><br>\r\nCRUISER\r\n<br><br><br><br>\r\nSUBMARINE\r\n<br><br><br><br>\r\nDESTROYER\r\n</p><html>");
@@ -86,116 +69,116 @@ public class MyShips extends JDialog {
 			contentPanel.add(lblCarrierBattleshipCruiser);
 		}
 		{
-			textField_1 = new JTextField();
-			textField_1.setColumns(10);
-			textField_1.setBounds(730, 71, 40, 35);
-			textField_1.setTransferHandler(new battleship.ValueImportTransferHandler());
-			contentPanel.add(textField_1);
+			txtLocations[1] = new JTextField();
+			txtLocations[1].setColumns(10);
+			txtLocations[1].setBounds(730, 71, 40, 35);
+			txtLocations[1].setTransferHandler(new battleship.ValueImportTransferHandler());
+			contentPanel.add(txtLocations[1]);
 		}
 		{
-			textField_2 = new JTextField();
-			textField_2.setColumns(10);
-			textField_2.setBounds(780, 71, 40, 35);
-			textField_2.setTransferHandler(new ValueImportTransferHandler());
-			contentPanel.add(textField_2);
+			txtLocations[2] = new JTextField();
+			txtLocations[2].setColumns(10);
+			txtLocations[2].setBounds(780, 71, 40, 35);
+			txtLocations[2].setTransferHandler(new ValueImportTransferHandler());
+			contentPanel.add(txtLocations[2]);
 		}
 		{
-			textField_3 = new JTextField();
-			textField_3.setColumns(10);
-			textField_3.setBounds(830, 71, 40, 35);
-			textField_3.setTransferHandler(new ValueImportTransferHandler());
-			contentPanel.add(textField_3);
+			txtLocations[3] = new JTextField();
+			txtLocations[3].setColumns(10);
+			txtLocations[3].setBounds(830, 71, 40, 35);
+			txtLocations[3].setTransferHandler(new ValueImportTransferHandler());
+			contentPanel.add(txtLocations[3]);
 		}
 		{
-			textField_4 = new JTextField();
-			textField_4.setColumns(10);
-			textField_4.setBounds(880, 71, 40, 35);
-			textField_4.setTransferHandler(new ValueImportTransferHandler());
-			contentPanel.add(textField_4);
+			txtLocations[4] = new JTextField();
+			txtLocations[4].setColumns(10);
+			txtLocations[4].setBounds(880, 71, 40, 35);
+			txtLocations[4].setTransferHandler(new ValueImportTransferHandler());
+			contentPanel.add(txtLocations[4]);
 		}
 		{
-			textField_5 = new JTextField();
-			textField_5.setColumns(10);
-			textField_5.setBounds(680, 137, 40, 35);
-			textField_5.setTransferHandler(new ValueImportTransferHandler());
-			contentPanel.add(textField_5);
+			txtLocations[5] = new JTextField();
+			txtLocations[5].setColumns(10);
+			txtLocations[5].setBounds(680, 137, 40, 35);
+			txtLocations[5].setTransferHandler(new ValueImportTransferHandler());
+			contentPanel.add(txtLocations[5]);
 		}
 		{
-			textField_6 = new JTextField();
-			textField_6.setColumns(10);
-			textField_6.setBounds(730, 137, 40, 35);
-			textField_6.setTransferHandler(new ValueImportTransferHandler());
-			contentPanel.add(textField_6);
+			txtLocations[6] = new JTextField();
+			txtLocations[6].setColumns(10);
+			txtLocations[6].setBounds(730, 137, 40, 35);
+			txtLocations[6].setTransferHandler(new ValueImportTransferHandler());
+			contentPanel.add(txtLocations[6]);
 		}
 		{
-			textField_7 = new JTextField();
-			textField_7.setColumns(10);
-			textField_7.setBounds(780, 137, 40, 35);
-			textField_7.setTransferHandler(new ValueImportTransferHandler());
-			contentPanel.add(textField_7);
+			txtLocations[7] = new JTextField();
+			txtLocations[7].setColumns(10);
+			txtLocations[7].setBounds(780, 137, 40, 35);
+			txtLocations[7].setTransferHandler(new ValueImportTransferHandler());
+			contentPanel.add(txtLocations[7]);
 		}
 		{
-			textField_8 = new JTextField();
-			textField_8.setColumns(10);
-			textField_8.setBounds(830, 137, 40, 35);
-			textField_8.setTransferHandler(new ValueImportTransferHandler());
-			contentPanel.add(textField_8);
+			txtLocations[8] = new JTextField();
+			txtLocations[8].setColumns(10);
+			txtLocations[8].setBounds(830, 137, 40, 35);
+			txtLocations[8].setTransferHandler(new ValueImportTransferHandler());
+			contentPanel.add(txtLocations[8]);
 		}
 		{
-			textField_9 = new JTextField();
-			textField_9.setColumns(10);
-			textField_9.setBounds(680, 207, 40, 35);
-			textField_9.setTransferHandler(new ValueImportTransferHandler());
-			contentPanel.add(textField_9);
+			txtLocations[9] = new JTextField();
+			txtLocations[9].setColumns(10);
+			txtLocations[9].setBounds(680, 207, 40, 35);
+			txtLocations[9].setTransferHandler(new ValueImportTransferHandler());
+			contentPanel.add(txtLocations[9]);
 		}
 		{
-			textField_10 = new JTextField();
-			textField_10.setColumns(10);
-			textField_10.setBounds(730, 207, 40, 35);
-			textField_10.setTransferHandler(new ValueImportTransferHandler());
-			contentPanel.add(textField_10);
+			txtLocations[10] = new JTextField();
+			txtLocations[10].setColumns(10);
+			txtLocations[10].setBounds(730, 207, 40, 35);
+			txtLocations[10].setTransferHandler(new ValueImportTransferHandler());
+			contentPanel.add(txtLocations[10]);
 		}
 		{
-			textField_11 = new JTextField();
-			textField_11.setColumns(10);
-			textField_11.setBounds(780, 207, 40, 35);
-			textField_11.setTransferHandler(new ValueImportTransferHandler());
-			contentPanel.add(textField_11);
+			txtLocations[11] = new JTextField();
+			txtLocations[11].setColumns(10);
+			txtLocations[11].setBounds(780, 207, 40, 35);
+			txtLocations[11].setTransferHandler(new ValueImportTransferHandler());
+			contentPanel.add(txtLocations[11]);
 		}
 		{
-			textField_12 = new JTextField();
-			textField_12.setColumns(10);
-			textField_12.setBounds(680, 274, 40, 35);
-			textField_12.setTransferHandler(new ValueImportTransferHandler());
-			contentPanel.add(textField_12);
+			txtLocations[12] = new JTextField();
+			txtLocations[12].setColumns(10);
+			txtLocations[12].setBounds(680, 274, 40, 35);
+			txtLocations[12].setTransferHandler(new ValueImportTransferHandler());
+			contentPanel.add(txtLocations[12]);
 		}
 		{
-			textField_13 = new JTextField();
-			textField_13.setColumns(10);
-			textField_13.setBounds(730, 274, 40, 35);
-			textField_13.setTransferHandler(new ValueImportTransferHandler());
-			contentPanel.add(textField_13);
+			txtLocations[13] = new JTextField();
+			txtLocations[13].setColumns(10);
+			txtLocations[13].setBounds(730, 274, 40, 35);
+			txtLocations[13].setTransferHandler(new ValueImportTransferHandler());
+			contentPanel.add(txtLocations[13]);
 		}
 		{
-			textField_14 = new JTextField();
-			textField_14.setColumns(10);
-			textField_14.setBounds(780, 274, 40, 35);
-			textField_14.setTransferHandler(new ValueImportTransferHandler());
-			contentPanel.add(textField_14);
+			txtLocations[14] = new JTextField();
+			txtLocations[14].setColumns(10);
+			txtLocations[14].setBounds(780, 274, 40, 35);
+			txtLocations[14].setTransferHandler(new ValueImportTransferHandler());
+			contentPanel.add(txtLocations[14]);
 		}
 		{
-			textField_15 = new JTextField();
-			textField_15.setColumns(10);
-			textField_15.setBounds(680, 340, 40, 35);
-			textField_15.setTransferHandler(new ValueImportTransferHandler());
-			contentPanel.add(textField_15);
+			txtLocations[15] = new JTextField();
+			txtLocations[15].setColumns(10);
+			txtLocations[15].setBounds(680, 340, 40, 35);
+			txtLocations[15].setTransferHandler(new ValueImportTransferHandler());
+			contentPanel.add(txtLocations[15]);
 		}
 		{
-			textField_16 = new JTextField();
-			textField_16.setColumns(10);
-			textField_16.setBounds(730, 340, 40, 35);
-			textField_16.setTransferHandler(new ValueImportTransferHandler());
-			contentPanel.add(textField_16);
+			txtLocations[16] = new JTextField();
+			txtLocations[16].setColumns(10);
+			txtLocations[16].setBounds(730, 340, 40, 35);
+			txtLocations[16].setTransferHandler(new ValueImportTransferHandler());
+			contentPanel.add(txtLocations[16]);
 		}
 		{
 			panel = new JPanel();
@@ -214,25 +197,25 @@ public class MyShips extends JDialog {
 				okButton.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					BattleshipClient.carrier[0] = textField.getText();
-					BattleshipClient.carrier[1] = textField_1.getText();
-					BattleshipClient.carrier[2] = textField_2.getText();
-					BattleshipClient.carrier[3] = textField_3.getText();
-					BattleshipClient.carrier[4] = textField_4.getText();
-					BattleshipClient.battleship[0] = textField_5.getText();
-					BattleshipClient.battleship[1] = textField_6.getText();
-					BattleshipClient.battleship[2] = textField_7.getText();
-					BattleshipClient.battleship[3] = textField_8.getText();
-					BattleshipClient.cruiser[0] = textField_9.getText();
-					BattleshipClient.cruiser[1] = textField_10.getText();
-					BattleshipClient.cruiser[2] = textField_11.getText();
-					BattleshipClient.submarine[0] = textField_12.getText();
-					BattleshipClient.submarine[1] = textField_13.getText();
-					BattleshipClient.submarine[2] = textField_14.getText();
-					BattleshipClient.destroyer[0] = textField_15.getText();
-					BattleshipClient.destroyer[1] = textField_16.getText();
+					BattleshipClient.carrier[0] = txtLocations[0].getText();
+					BattleshipClient.carrier[1] = txtLocations[1].getText();
+					BattleshipClient.carrier[2] = txtLocations[2].getText();
+					BattleshipClient.carrier[3] = txtLocations[3].getText();
+					BattleshipClient.carrier[4] = txtLocations[4].getText();
+					BattleshipClient.battleship[0] = txtLocations[5].getText();
+					BattleshipClient.battleship[1] = txtLocations[6].getText();
+					BattleshipClient.battleship[2] = txtLocations[7].getText();
+					BattleshipClient.battleship[3] = txtLocations[8].getText();
+					BattleshipClient.cruiser[0] = txtLocations[9].getText();
+					BattleshipClient.cruiser[1] = txtLocations[10].getText();
+					BattleshipClient.cruiser[2] = txtLocations[11].getText();
+					BattleshipClient.submarine[0] = txtLocations[12].getText();
+					BattleshipClient.submarine[1] = txtLocations[13].getText();
+					BattleshipClient.submarine[2] = txtLocations[14].getText();
+					BattleshipClient.destroyer[0] = txtLocations[15].getText();
+					BattleshipClient.destroyer[1] = txtLocations[16].getText();
 					
-					BattleshipClient.printLocations();
+					BattleshipClient.PrintLocations();
 					BattleshipClient.myBoard.setVisible(false);
 				}
 			});
@@ -292,9 +275,7 @@ public class MyShips extends JDialog {
 			}
 		}
 	}
-	
-	public static String[] getLocations()
-	{
-		return myLocations;
-	}
+//	public static String[] getLocations(){
+//		return txtLocations;
+//	}
 }
