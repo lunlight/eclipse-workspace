@@ -15,6 +15,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.text.DefaultCaret;
 import javax.swing.JLabel;
@@ -25,10 +26,14 @@ import java.awt.Font;
 import javax.swing.JProgressBar;
 
 import java.awt.SystemColor;
+import javax.swing.UIManager;
 
 public class BattleshipClient
 {
+	protected static JTextArea chatText;
 	protected static JTextArea consoleText;
+	protected static JTextField inputMessage;
+	
 	protected static boolean hit = false;
 	protected static boolean hitMe = false;
 
@@ -55,6 +60,8 @@ public class BattleshipClient
 	protected static JPanel myMap;
 
 	private JFrame frame;
+	
+	
 
 	/**
 	 * Launch the application.
@@ -271,20 +278,45 @@ public class BattleshipClient
 	}
 
 	private void CreateConsole(){
-		JScrollPane console = new JScrollPane (JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, 
-				ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-		console.setBounds(991, 0, 243, 500);
+		JScrollPane console = new JScrollPane (JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		console.setBounds(991, 0, 243, 200);
 		frame.getContentPane().add(console);
-
-		//		CONSOLE
+		
+//		CONSOLE
 		consoleText = new JTextArea();
 		console.setViewportView(consoleText);
 		consoleText.setBackground(Color.DARK_GRAY);
 		consoleText.setForeground(Color.GREEN);
 		consoleText.setLineWrap(true);
 		consoleText.setEditable(false);
+		
+		
+//		ADD CHAT LABEL
+		
+		JScrollPane chat = new JScrollPane(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		chat.setBounds(991, 201, 243, 300);
+		frame.getContentPane().add(chat);
+			
+		chatText = new JTextArea();
+		chat.setViewportView(chatText);
+		chatText.setLineWrap(true);
+//		chatText.setBounds(0, 0, 224, 248);
+		chatText.setForeground(Color.BLACK);
+		chatText.setBackground(Color.WHITE);
+		chatText.setEditable(false);
+		
+		inputMessage = new JTextField();
+		inputMessage.setBounds(991, 480, 10, 20);
+		inputMessage.setForeground(Color.BLACK);
+		inputMessage.setBackground(Color.LIGHT_GRAY);
+		
+		chat.setColumnHeaderView(inputMessage);
+		
+		
 		DefaultCaret caret = (DefaultCaret) consoleText.getCaret();
 		caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
+		DefaultCaret caret2 = (DefaultCaret) chatText.getCaret();
+		caret2.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
 	}
 
 	private void CreateActionListeners( ActionListener[] actionListeners ){
@@ -311,6 +343,10 @@ public class BattleshipClient
 
 	private static void WriteInConsole(String str){
 		consoleText.append("\n"+str);
+	}
+	
+	private static void WriteInChat(String str){
+		chatText.append("\n"+str);
 	}
 
 	protected static void PrintLocations(){
