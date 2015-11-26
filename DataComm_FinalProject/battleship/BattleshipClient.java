@@ -1,77 +1,68 @@
 package battleship;
 
+import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.SystemColor;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JProgressBar;
 import javax.swing.JScrollPane;
-
-import java.awt.Color;
-import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
-import javax.swing.text.DefaultCaret;
-import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+import javax.swing.text.DefaultCaret;
 
-import java.awt.Font;
+public class BattleshipClient{
+  protected static JTextArea chatText;
+  protected static JTextArea consoleText;
+  protected static JTextField inputMessage;
 
-import javax.swing.JProgressBar;
+  protected static boolean hit = false;
+  protected static boolean hitMe = false;
 
-import java.awt.SystemColor;
-import javax.swing.UIManager;
+  protected static JButton[] myBoardButtons;
+  protected static JButton[] myEnemyButtons;
 
-public class BattleshipClient
-{
-	protected static JTextArea chatText;
-	protected static JTextArea consoleText;
-	protected static JTextField inputMessage;
-	
-	protected static boolean hit = false;
-	protected static boolean hitMe = false;
+  protected static String[] carrier = new String[5];
+  protected static String[] battleship = new String[4];
+  protected static String[] cruiser = new String[3];
+  protected static String[] submarine = new String[3];
+  protected static String[] destroyer = new String[2];
+  protected static String[] myLocations = new String[17];
 
-	protected static JButton[] myBoardButtons;
-	protected static JButton[] myEnemyButtons;
+  protected static JProgressBar progressBar_CARRIER;
+  protected static JProgressBar progressBar_BATTLESHIP;
+  protected static JProgressBar progressBar_CRUISER;
+  protected static JProgressBar progressBar_SUBMARINE;
+  protected static JProgressBar progressBar_DESTROYER;
 
-	protected static String[] carrier = new String[5];
-	protected static String[] battleship = new String[4];
-	protected static String[] cruiser = new String[3];
-	protected static String[] submarine = new String[3];
-	protected static String[] destroyer = new String[2];
-	protected static String[] myLocations = new String[17];
+  protected static MyShips myBoard;
 
-	protected static JProgressBar progressBar_CARRIER;
-	protected static JProgressBar progressBar_BATTLESHIP;
-	protected static JProgressBar progressBar_CRUISER;
-	protected static JProgressBar progressBar_SUBMARINE;
-	protected static JProgressBar progressBar_DESTROYER;
+  protected static JPanel panel;
+  protected static JPanel myEnemy;
+  protected static JPanel myMap;
 
-	protected static MyShips myBoard;
+  private JFrame frame;
 
-	protected static JPanel panel;
-	protected static JPanel myEnemy;
-	protected static JPanel myMap;
-
-	private JFrame frame;
-	
-	
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					BattleshipClient window = new BattleshipClient();
-					window.frame.setVisible(true);
+  /**
+  * Launch the application.
+  */
+  public static void main(String[] args) {
+    EventQueue.invokeLater(new Runnable() {
+      public void run() {
+        try {
+          BattleshipClient window = new BattleshipClient();
+          window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -345,6 +336,7 @@ public class BattleshipClient
 		consoleText.append("\n"+str);
 	}
 	
+	@SuppressWarnings("unused")
 	private static void WriteInChat(String str){
 		chatText.append("\n"+str);
 	}
