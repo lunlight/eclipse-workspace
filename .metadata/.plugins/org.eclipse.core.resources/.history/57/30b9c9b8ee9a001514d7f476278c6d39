@@ -215,7 +215,7 @@ public class MyShips extends JDialog {
 					BattleshipClient.destroyer[0] = txtLocations[15].getText();
 					BattleshipClient.destroyer[1] = txtLocations[16].getText();
 					
-					BattleshipClient.printLocations();
+					BattleshipClient.PrintLocations();
 					BattleshipClient.myBoard.setVisible(false);
 				}
 			});
