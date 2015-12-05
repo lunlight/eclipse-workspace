@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="0" key="org.eclipse.egit.ui.internal.clone.GitSelectWizardPageWizardSel"/>
+	<item value="/Users/lunlight/eclipse-workspace/.git" key="GitSelectRepositoryPage.lastRepository"/>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/lunlight/eclipse-workspace"/>
+		<item value="https://github.com/rbenitezpagan/eclipse-workspace/tree/development?files=1"/>
+		<item value="lunlight@b8:ee:98:7c:15:64:fc:e8:dd:88:18:fc:3e:08:e3:1e"/>
+		<item value="ssh://lunlight@github.com:32/rbenitezpagan/eclipse-workspace/tree/development?files=1"/>
+	</list>
+	<section name="GitImportWizard">
+		<item value="true" key="GitProjectsImportPage.STORE_NESTED_PROJECTS"/>
+	</section>
+</section>

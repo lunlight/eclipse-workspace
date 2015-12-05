@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;battleship.TCPServer.java&apos; to &apos;TCPClient.java&apos;&#x0A;- Original project: &apos;GitHub-Workspace&apos;&#x0A;- Original element: &apos;battleship.TCPServer.java&apos;&#x0A;- Renamed element: &apos;battleship.TCPClient.java&apos;" description="Rename compilation unit &apos;TCPServer.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/DataComm_FinalProject&lt;battleship{TCPServer.java" name="TCPClient.java" references="false" stamp="1449276454569" version="1.0"/>
+</session>

@@ -1,0 +1,11 @@
+package battleship;
+import java.io.*;
+public class MyServer {
+
+	public static void main(String[] args) {
+		// Esto es el servidor para los clientes....
+		// Probando GitHub primero.
+
+	}
+
+}
